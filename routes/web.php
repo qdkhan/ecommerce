@@ -7,6 +7,7 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\Admin\AdminDashboard;
 use App\Http\Livewire\User\UserDashboard;
+use App\Http\Livewire\ProductDetail;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::get('/', HomeComponent::class);
 Route::get('/shop', ShopComponent::class);
 Route::get('/cart', CartComponent::class);
 Route::get('/checkout', CheckoutComponent::class);
+Route::get('/product/{slug}', ProductDetail::class)->name('product.details');
 
 //Authentication Using Livewire & jetstream
 /* Route::middleware([
