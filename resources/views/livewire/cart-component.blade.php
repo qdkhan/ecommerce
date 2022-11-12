@@ -10,8 +10,12 @@
     </div>
     <div class=" main-content-area">
         @if(session()->has('success_message'))
-            <div class="alert alert-success" role="alert">{{session('success_message')}}</div>
+            <div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>Success! </strong> {{session('success_message')}}
+            </div>
         @endif
+
         @if(Cart::count() > 0)
             <div class="wrap-iten-in-cart">
                 <h3 class="box-title">Products Name</h3>
