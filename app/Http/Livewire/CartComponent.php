@@ -9,16 +9,14 @@ class CartComponent extends Component
 {
     public function increaseQuantity($rowId) {
         $product = Cart::get($rowId);
-        $qty = $product->qty +1;
-        // $product->qty +=1;
-        Cart::update($rowId, $qty);
+        $product->qty +=1;
+        Cart::update($rowId, $product->qty);
     }
 
     public function decreaseQuantity($rowId) {
         $product = Cart::get($rowId);
-        $qty = $product->qty-1;
-        // $product->qty -=1;
-        Cart::update($rowId, $qty);
+        $product->qty -=1;
+        Cart::update($rowId, $product->qty);
     }
 
     public function render()
