@@ -31,7 +31,7 @@ Route::get('/shop', ShopComponent::class);
 Route::get('/cart', CartComponent::class)->name('product.carts');
 Route::get('/checkout', CheckoutComponent::class);
 Route::get('/product/{slug}', ProductDetail::class)->name('product.details');
-Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
+Route::get('/product-category/{category_id}/{category_name}', CategoryComponent::class)->name('product.category');
 
 //Authentication Using Livewire & jetstream
 /* Route::middleware([
