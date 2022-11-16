@@ -20,8 +20,13 @@ class CartComponent extends Component
     }
 
     public function destroy($rowId) {
-        cart::remove($rowId);
+        Cart::remove($rowId);
         return redirect()->back()->with('success_message', 'Item Deleted From Cart');
+    }
+
+    public function destroyAll() {
+        Cart::destroy();
+        return redirect()->back()->with('success_message', 'All Item Deleted From Cart');
     }
 
     public function render()
