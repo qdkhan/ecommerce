@@ -29,12 +29,12 @@
     </div>
 
 	<!--header-->
-	@include('partials.header')
+	@include('livewire.header')
 
     {{$slot}}
 
 	<!--footer-->
-	@include('partials.footer')
+	@include('livewire.footer')
 
 	<script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
 	<script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>

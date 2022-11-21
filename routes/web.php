@@ -9,6 +9,7 @@ use App\Http\Livewire\Admin\AdminDashboard;
 use App\Http\Livewire\User\UserDashboard;
 use App\Http\Livewire\ProductDetail;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\SearchComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('/cart', CartComponent::class)->name('product.carts');
 Route::get('/checkout', CheckoutComponent::class);
 Route::get('/product/{slug}', ProductDetail::class)->name('product.details');
 Route::get('/product-category/{category_id}/{category_name}', CategoryComponent::class)->name('product.category');
+Route::get('/search', SearchComponent::class)->name('product.search');
 
 //Authentication Using Livewire & jetstream
 /* Route::middleware([

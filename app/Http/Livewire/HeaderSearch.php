@@ -17,6 +17,6 @@ class HeaderSearch extends Component
     public function render()
     {
         $categories = Category::all();
-        return view('partials.header-search', ['categories' => $categories]);
+        return view('livewire.header-search', ['categories' => $categories]);
     }
 }
