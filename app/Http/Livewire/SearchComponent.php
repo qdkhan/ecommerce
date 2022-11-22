@@ -19,7 +19,7 @@ class SearchComponent extends Component
     public function mount() {
         $this->sorting = "default";
         $this->pagesize = 12;
-        $this->fill(request()->only)('search', 'product_cat', 'product_cat_id');
+        $this->fill(request()->only('search', 'product_cat', 'product_cat_id'));
     }
 
     public function store($product_id, $product_name, $product_price) {
