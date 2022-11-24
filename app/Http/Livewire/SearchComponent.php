@@ -37,7 +37,7 @@ class SearchComponent extends Component
 
             $products = Product::select('*')
                                 ->where('name', 'like', '%'.$this->search.'%')
-                                ->where('category_id', 'like', '%'.$this->product_cat.'%')
+                                ->where('category_id', 'like', '%'.$this->product_cat_id.'%')
                                 ->orderBy('created_at', 'DESC')
                                 ->paginate($this->pagesize);
 
@@ -45,7 +45,7 @@ class SearchComponent extends Component
 
             $products = Product::select('*')
                                 ->where('name', 'like', '%'.$this->search.'%')
-                                ->where('category_id', 'like', '%'.$this->product_cat.'%')
+                                ->where('category_id', 'like', '%'.$this->product_cat_id.'%')
                                 ->orderBy('regular_price', 'ASC')
                                 ->paginate($this->pagesize);
 
@@ -53,14 +53,14 @@ class SearchComponent extends Component
 
             $products = Product::select('*')
                                 ->where('name', 'like', '%'.$this->search.'%')
-                                ->where('category_id', 'like', '%'.$this->product_cat.'%')
+                                ->where('category_id', 'like', '%'.$this->product_cat_id.'%')
                                 ->orderBy('regular_price', 'DESC')
                                 ->paginate($this->pagesize);
         } else{
 
             $products = Product::select('*')
                                 ->where('name', 'like', '%'.$this->search.'%')
-                                ->where('category_id', 'like', '%'.$this->product_cat.'%')
+                                ->where('category_id', 'like', '%'.$this->product_cat_id.'%')
                                 ->orderBy('id', 'DESC')
                                 ->paginate($this->pagesize);
         }
